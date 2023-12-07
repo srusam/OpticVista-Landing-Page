@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optic Vista Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        
+        <header>
+            <!-- nav bar start -->
+            <a href="#"><img class="logo" src="images/Logo.png" alt="Logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Trends</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <!-- nav bar end -->
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>View the world your own way<br>with <span id="changetext">OpticVista</span></h2>
+                <p>Create trends with glasses.<br>Choose what suits your mood.<br>Enhance not only your vision, but also beauty.</p>
+                <a id="changebutton" href="#">Shop Now</a>
+            </div>
+            <div class="imgBox">
+                <img class="models" src="images/Brown.png" alt="Brown transparent glasses">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="images/brown_glasses.png" alt="brown" onclick="imgSlider('images/Brown.png'); changecolor('#964B00')">
+            </li>
+            <li><img id="a" src="images/Black_tinted_glasses (2).png" alt="black tinted" onclick="imgSlider('images/Black_tinted.png'); changecolor('#000000')">
+            </li>
+            <li><img id="b" src="images/Black_trans_glasses.png" alt="black transparent" onclick="imgSlider('images/Black_trans.png'); changecolor('#808080')">
+            </li>
+            <li><img id="c" src="images/Brown_black_glasses.png" alt="blackish brown" onclick="imgSlider('images/Brown_Black.png'); changecolor('#453b32')">
+            </li>
+            <li><img src="images/Red_tinted_glasses.png" alt="red tinted" onclick="imgSlider('images/Red_tinted.png'); changecolor('#FF0000')">
+            </li>
+            <li><img src="images/Violet_glasses.png" alt="violet tinted" onclick="imgSlider('images/Violet.png'); changecolor('#7F00FF')">
+            </li>
+            <li><img src="images/Yellow_glasses.png" alt="yellow tinted" onclick="imgSlider('images/Yellow.png'); changecolor('#FFFF00')">
+            </li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="images/instagram.jpg" alt=""></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.models').src = anything;
+        }
+
+        function changecolor(color){
+            const texter = document.querySelector('#changetext');
+            texter.style.color = color;
+            const shop = document.querySelector('#changebutton');
+            shop.style.background = color;
+        }
+    </script>
+</body>
+</html>
